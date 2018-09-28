@@ -1,0 +1,1 @@
+# wp-error-reporting-patch
