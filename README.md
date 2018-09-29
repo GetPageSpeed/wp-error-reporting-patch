@@ -4,9 +4,11 @@ This plugin automatically patches `wp-load.php` and disables known Wordpress cor
 
 ## Some background
 
-PHP versions >= 7.0, which have [changed their internal design](https://bugs.php.net/bug.php?id=71340) to allow (for hackers benefit), to change error reporting level and effectively override whatever level was set by system admin.
+PHP versions >= 7.0 have [changed their internal design](https://bugs.php.net/bug.php?id=71340) to allow (for hackers benefit), to adjust error reporting level while overridding whatever level was set by system admin.
 
-For production websites, disallowing the `error_reporting` function *altogether* is the best security measure. Because otherwise it allows hackers to [stay undetected easily while exploiting your server](https://www.getpagespeed.com/server-setup/security/php-security-disable-error_reporting-now). 
+Ability to call `error_reporting(0)`, allows hackers to [stay undetected easily while exploiting your server](https://www.getpagespeed.com/server-setup/security/php-security-disable-error_reporting-now). 
+
+For production websites, disallowing the `error_reporting` function *altogether* is the best security measure you can take about it. 
 
 You should obviously disable `error_reporting` function in your `php.ini`. But once you do, you will find quite a few warnings in your logs:
 
