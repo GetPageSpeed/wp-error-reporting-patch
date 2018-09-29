@@ -16,7 +16,7 @@ You should obviously disable `error_reporting` function in your `php.ini`. But o
 
 > error_reporting() has been disabled for security reasons in load.php on line 333
 
-This complementary plugin will make sure that Wordpress will not try to call `error_reporting()`, thus eliminating unnecessary those warnings.
+This complementary plugin will make sure that Wordpress will not try to call `error_reporting()`, thus eliminating those unnecessary warnings.
 
 So the plugin:
 
