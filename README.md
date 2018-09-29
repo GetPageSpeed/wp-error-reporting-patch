@@ -16,4 +16,4 @@ This complementary patch will make sure that Wordpress will not try to call `err
 So the plugin:
 
 * keeps your logs cleaner
-* makes your Wordpress lines a few less lines of unnecessary code
+* makes your Wordpress run a few less lines of unnecessary code
