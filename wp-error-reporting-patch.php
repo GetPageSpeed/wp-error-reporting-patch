@@ -2,7 +2,7 @@
 /*
  * Plugin Name: WP Error Reporting Patch
  * Description: Stop Wordpress from changing error reporting level
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Danila Vershinin (www.getpagespeed.com)
  * Author URI: https://www.getpagespeed.com/
  * License: AGPLv3 or later
@@ -26,4 +26,6 @@ function gps_error_reporting_patch_activate() {
     }
 }    
 
-register_activation_hook( __FILE__, 'gps_error_reporting_patch_activate' );   
+register_activation_hook( __FILE__, 'gps_error_reporting_patch_activate' ); 
+// priority "9" ensures that the patch runs before the opcache clear
+add_action('upgrader_process_complete', 'gps_error_reporting_patch_activate', 9, 2);
